@@ -1,0 +1,112 @@
+/* Flexbox layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #674636;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav {
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 2px;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #674636;
+    background-color: #fff;
+}
+
+/* Tampilkan menu secara horizontal di layar besar */
+@media (min-width: 768px) {
+    nav ul li {
+        display: inline;
+        margin-right: 15px;
+    }
+}
+
+/* Tombol menu (toggle) */
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Tampilkan tombol menu di layar mobile */
+    .nav-toggle {
+        display: block;
+        background-color: #674636;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* Sembunyikan menu di mobile */
+    .nav-menu {
+        display: none;
+    }
+
+    /* Menu aktif, tampilkan */
+    .nav-menu.active {
+        display: block;
+    }
+
+    /* Setiap item menu di mobile tampil vertikal */
+    .nav-menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#content {
+    flex: 2;
+}
+
+article {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ECDFCC;
+}
+
+aside {
+    flex: 1;
+    padding: 10px;
+    background-color: #BC9F8B;
+}
+
+aside img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+footer {
+    padding: 10px;
+}
+
+aside .image {
+    width: 150px;
+}
